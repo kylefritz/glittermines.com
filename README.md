@@ -1,27 +1,45 @@
-# glittermines.com
+# Landing Pages Monorepo
+
+Mini landing page sites, each in their own directory under `sites/`.
+
+## Sites
+
+| Site | Directory | Hosting |
+|------|-----------|---------|
+| [glittermines.com](https://glittermines.com) | `sites/glittermines.com` | Cloudflare Pages |
+| [errrbody.biz](https://errrbody.biz) | `sites/errrbody.biz` | Vercel |
+| [lifedvr.com](https://lifedvr.com) | `sites/lifedvr.com` | Cloudflare Pages |
 
 ## Setup
 
+Install all site dependencies:
+
 ```bash
-bun install
+bun run install:all
 ```
 
 ## Development
 
-```bash
-bun dev
-```
+Run any site locally:
 
-Starts a local server with HMR at http://localhost:3000.
+```bash
+bun run dev:glittermines
+bun run dev:errrbody
+bun run dev:lifedvr
+```
 
 ## Deploy
 
-Hosted on Cloudflare Pages. To deploy:
+Deploy a single site:
+
+```bash
+bun run deploy:glittermines
+bun run deploy:errrbody
+bun run deploy:lifedvr
+```
+
+Deploy all sites:
 
 ```bash
 bun run deploy
 ```
-
-This copies static files to `public/` and deploys to the `glittermines-com` Pages project.
-
-Custom domain is configured in the Cloudflare dashboard under Pages > glittermines-com > Custom domains.
