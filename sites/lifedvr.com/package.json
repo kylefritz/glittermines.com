@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "bun run index.ts",
     "start": "NODE_ENV=production bun run index.ts",
-    "build": "mkdir -p public && cp index.html public/",
+    "build": "mkdir -p public && cp index.html life_dvr.png favicon.png public/",
     "deploy": "bun run build && wrangler pages deploy ./public --project-name lifedvr-com"
   },
   "devDependencies": {
