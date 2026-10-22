@@ -1,21 +1,19 @@
 {
-  "name": "glittermines.com",
-  "module": "index.ts",
-  "type": "module",
+  "name": "landing-pages",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "bun run index.ts",
-    "start": "NODE_ENV=production bun run index.ts",
-    "build": "mkdir -p public && cp index.html glitter-mines.png public/",
-    "deploy": "bun run build && wrangler pages deploy ./public --project-name glittermines-com"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "wrangler": "^4.68.1"
+    "dev:glittermines": "cd sites/glittermines.com && bun run dev",
+    "dev:errrbody": "cd sites/errrbody.biz && bun run dev",
+    "dev:lifedvr": "cd sites/lifedvr.com && bun run dev",
+    "build": "bun run build:glittermines && bun run build:errrbody && bun run build:lifedvr",
+    "build:glittermines": "cd sites/glittermines.com && bun run build",
+    "build:errrbody": "cd sites/errrbody.biz && bun run build",
+    "build:lifedvr": "cd sites/lifedvr.com && bun run build",
+    "deploy": "bun run deploy:glittermines && bun run deploy:errrbody && bun run deploy:lifedvr",
+    "deploy:glittermines": "cd sites/glittermines.com && bun install && bun run deploy",
+    "deploy:errrbody": "cd sites/errrbody.biz && bun install && bun run deploy",
+    "deploy:lifedvr": "cd sites/lifedvr.com && bun install && bun run deploy",
+    "install:all": "cd sites/glittermines.com && bun install && cd ../errrbody.biz && bun install && cd ../lifedvr.com && bun install"
   }
 }
