@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "errrbody-biz",
+  "compatibility_date": "2026-10-19",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "dist"
+  },
+  "routes": [
+    { "pattern": "errrbody.biz", "custom_domain": true },
+    { "pattern": "www.errrbody.biz", "custom_domain": true }
+  ]
+}

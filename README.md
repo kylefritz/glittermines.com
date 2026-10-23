@@ -7,7 +7,7 @@ Mini landing page sites, each in their own directory under `sites/`.
 | Site | Directory | Hosting |
 |------|-----------|---------|
 | [glittermines.com](https://glittermines.com) | `sites/glittermines.com` | Cloudflare Pages |
-| [errrbody.biz](https://errrbody.biz) | `sites/errrbody.biz` | Vercel |
+| [errrbody.biz](https://errrbody.biz) | `sites/errrbody.biz` | Cloudflare Workers |
 | [lifedvr.com](https://lifedvr.com) | `sites/lifedvr.com` | Cloudflare Pages |
 
 ## Setup
